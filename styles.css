@@ -1,5 +1,148 @@
-h1
-{
-    font-weight: bold;
-   text-align: center;
+h1 {
+    font-family: "Segoe Script", "Brush Script MT", cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+@keyframes flutter {
+    0%, 100% { transform: translateY(-50%) rotate(-20deg); }
+    50% { transform: translateY(-50%) rotate(-25deg); }
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url("https://thumbs.dreamstime.com/b/floating-pixel-art-castle-sky-magical-runes-surround-glowing-city-clouds-night-scene-shows-futuristic-energy-beams-346224626.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.center-square {
+    width: 260px;
+    height: 260px;
+    position: fixed;
+    top: calc(50% + 48px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #ffffff 0%, #8ee7e7 47%, #d9d0ff 100%);
+    border: 4px solid #333;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    font: bold 2rem "Brush Script MT", cursive;
+    color: midnightblue;
+    text-transform: capitalize;
+    flex-direction: column;
+}
+
+.center-square::before,
+.guide-square::before,
+.begin-square::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4));
+    border-radius: 50% 50% 20% 80%;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-20deg);
+    z-index: -1;
+    filter: blur(0.3px);
+    box-shadow: 0 -35px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4)), 0 35px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4));
+    animation: flutter 1.4s ease-in-out infinite;
+}
+
+.center-square::after,
+.guide-square::after,
+.begin-square::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(-45deg, rgba(255,255,255,0.8), rgba(173,216,230,0.6), rgba(255,182,193,0.4), rgba(144,238,144,0.3));
+    border-radius: 80% 20% 50% 50%;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+    z-index: -1;
+    filter: blur(0.3px);
+    box-shadow: 0 -28px 0 0 linear-gradient(-45deg, rgba(255,255,255,0.8), rgba(173,216,230,0.6), rgba(255,182,193,0.4), rgba(144,238,144,0.3)), 0 28px 0 0 linear-gradient(-45deg, rgba(255,255,255,0.8), rgba(173,216,230,0.6), rgba(255,182,193,0.4), rgba(144,238,144,0.3));
+    animation: flutter 1.4s ease-in-out infinite 0.7s;
+}
+
+.center-square::before,
+.center-square::after,
+.guide-square::before,
+.guide-square::after,
+.begin-square::before,
+.begin-square::after {
+    mix-blend-mode: screen;
+}
+
+/* Adjust wing sizes for smaller circles */
+.guide-square::before,
+.guide-square::after,
+.begin-square::before,
+.begin-square::after {
+    width: 60px;
+    height: 75px;
+    left: -30px;
+    right: -22px;
+    box-shadow: 0 -26px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4)), 0 26px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4));
+}
+
+.guide-square {
+    position: absolute;
+    left: -52px;
+    top: calc(100% + 8px);
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #ffffff 0%, #8ee7e7 47%, #d9d0ff 100%);
+    border: 3px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font: bold 1.2rem "Brush Script MT", cursive;
+    color: midnightblue;
+    text-transform: capitalize;
+}
+
+.begin-square {
+    position: absolute;
+    right: -52px;
+    top: calc(100% + 8px);
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #ffffff 0%, #8ee7e7 47%, #d9d0ff 100%);
+    border: 3px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font: bold 1.2rem "Brush Script MT", cursive;
+    color: midnightblue;
+    text-transform: capitalize;
 }
