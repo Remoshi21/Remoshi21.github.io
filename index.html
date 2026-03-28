@@ -5,25 +5,23 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <div class="header">
+            <h1>Bring whimsical wonder to your world...Whimsical Exif Editor!</h1>
+        </div>
+        <img id="welcome-image" src="Images/WelcomeButton.png" alt="Welcome"/>
+        
+        <h2 class="header" font-weight="400">
+            Make your dreamworld a reality by editing the metadata of any photo you choose! Upload a photo, and change the location information to say whatever your heart desires.
+        </h2>
+
         <div class="center-square">
-            <img id="welcome-image" src="Images/WelcomeButton.png" alt="Welcome" />
             <a href="tutorial.html" class="guide-link">
                 <div class="guide-square"><img id="guide-image" src="Images/GuideButton.png" alt="Guide" /></div>
             </a>
-            <div class="begin-square"><img id="begin-image" src="Images/BeginButton.png" alt="Begin" /></div>
+            <a href="image.html">
+                <div class="begin-square"><img id="begin-image" src="Images/BeginButton.png" alt="Begin" /></div>
+            </a>
         </div>
 
-        <h1>Bring whimsical wonder to your world...</h1>
-        <h1>Whimsical Exif Editor!</h1>
-        <div class="ExifEditorBody">
-            <img id="preview" style="max-width: 300px; display:none; margin-top:20px;">
-            <button id="upload">Upload Image</button>
-            <input type="file" id="fileInput" accept="image/*" style="display:none;">
-
-            <script src="upload_image.js" defer></script>
-        </div>
-        <p>
-            Make your dreamworld a reality by editing the metadata of any photo you choose! Upload a photo, and change the location information to say whatever your heart desires.
-        </p>
     </body>
 </html>
