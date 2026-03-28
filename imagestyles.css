@@ -37,6 +37,17 @@ body {
     margin:1px
 }
 
+#metadataEditor h3{
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 100px;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(100, 149, 237, 0.45);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    margin:1px
+}
+
 #metadataEditor input{
     border: 20px;
 }
