@@ -16,13 +16,17 @@ h1 {
 body {
     margin: 0;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-image: url("https://thumbs.dreamstime.com/b/floating-pixel-art-castle-sky-magical-runes-surround-glowing-city-clouds-night-scene-shows-futuristic-energy-beams-346224626.jpg");
+    font-family: "French Script MT", cursive;
+    background-image: url("Images/1166.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff;
+}
+
+* {
+    font-family: "French Script MT", cursive !important;
 }
 
 body::before {
@@ -44,50 +48,19 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(150deg, #ffffff 0%, #8ee7e7 47%, #d9d0ff 100%);
-    border: 4px solid #333;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-    border-radius: 50%;
-    font: bold 2rem "Brush Script MT", cursive;
-    color: midnightblue;
-    text-transform: capitalize;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
     flex-direction: column;
 }
 
-.center-square::before,
-.guide-square::before,
-.begin-square::before {
-    content: "";
-    position: absolute;
-    width: 80px;
-    height: 100px;
-    background: linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4));
-    border-radius: 50% 50% 20% 80%;
-    left: -40px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-20deg);
-    z-index: -1;
-    filter: blur(0.3px);
-    box-shadow: 0 -35px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4)), 0 35px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4));
-    animation: flutter 1.4s ease-in-out infinite;
-}
-
-.center-square::after,
-.guide-square::after,
-.begin-square::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 80px;
-    background: linear-gradient(-45deg, rgba(255,255,255,0.8), rgba(173,216,230,0.6), rgba(255,182,193,0.4), rgba(144,238,144,0.3));
-    border-radius: 80% 20% 50% 50%;
-    right: -30px;
-    top: 50%;
-    transform: translateY(-50%) rotate(20deg);
-    z-index: -1;
-    filter: blur(0.3px);
-    box-shadow: 0 -28px 0 0 linear-gradient(-45deg, rgba(255,255,255,0.8), rgba(173,216,230,0.6), rgba(255,182,193,0.4), rgba(144,238,144,0.3)), 0 28px 0 0 linear-gradient(-45deg, rgba(255,255,255,0.8), rgba(173,216,230,0.6), rgba(255,182,193,0.4), rgba(144,238,144,0.3));
-    animation: flutter 1.4s ease-in-out infinite 0.7s;
+.center-square img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .center-square::before,
@@ -96,7 +69,7 @@ body::before {
 .guide-square::after,
 .begin-square::before,
 .begin-square::after {
-    mix-blend-mode: screen;
+    display: none;
 }
 
 /* Adjust wing sizes for smaller circles */
@@ -120,13 +93,17 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(150deg, #ffffff 0%, #8ee7e7 47%, #d9d0ff 100%);
-    border: 3px solid #333;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    font: bold 1.2rem "Brush Script MT", cursive;
-    color: midnightblue;
-    text-transform: capitalize;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.guide-square img {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    display: block;
 }
 
 .begin-square {
@@ -138,15 +115,25 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(150deg, #ffffff 0%, #8ee7e7 47%, #d9d0ff 100%);
-    border: 3px solid #333;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    font: bold 1.2rem "Brush Script MT", cursive;
-    color: midnightblue;
-    text-transform: capitalize;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.begin-square img {
+    width: 165px;
+    height: 165px;
+    object-fit: cover;
+    display: block;
 }
 
 #upload{
     
+}
+
+/* remove generated wings around the welcome image */
+.center-square::before,
+.center-square::after {
+    display: none;
 }
