@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Upload Image</title>
+    <link rel="stylesheet", href="imagestyles.css">
+</head>
+<body background="Images/1166.jpg">
+
+    <div class="tutorial-text">
+        <p>Upload your text here by clicking on the button below.</p>
+    </div>
+
+    <div class="ExifEditorBody" width="100%" margin="auto">
+            <img id="preview" style="max-width: 300px; display:none; margin-top:20px;">
+            <button id="upload">Upload Image</button>
+            <input type="file" id="fileInput" accept="image/*" style="display:none;">
+
+            <script src="https://cdn.jsdelivr.net/npm/piexifjs"></script>
+            <script src="upload_image.js" defer></script>
+    </div>
+
+    <div id="metadataEditor" style="display:none; margin-top:20px;">
+        <h3>Edit Metadata</h3>
+
+        <label>
+            Camera Model:
+            <input type="text" id="cameraModel">
+        </label>
+        <br><br>
+
+        <label>
+            Owner Name:
+            <input type="text" id="ownerName">
+        </label>
+        <br><br>
+
+        <label>
+            Date Created:
+            <input type="text" id="dateCreated">
+        </label>
+        <br><br>
+
+        <label>
+            Date Modified:
+            <input type="text" id="dateModified">
+        </label>
+        <br><br>
+
+        <label>
+            GPS Latitude:
+            <input type="text" id="gpsLat">
+        </label>
+        <br><br>
+
+        <label>
+            GPS Longitude:
+            <input type="text" id="gpsLon">
+        </label>
+        <br><br>
+
+        <button id="saveMetadataBtn">Save Metadata</button>
+    </div>
+</body>

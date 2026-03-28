@@ -11,21 +11,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f5f5ff;
-            color: midnightblue;
+            flex-direction: column;
+            background-image: url("Images/1166.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: navy;
             font-family: "French Script MT", cursive;
             padding: 2rem;
             text-align: center;
         }
         .tutorial-text {
             max-width: 920px;
-            font-size: 1.25rem;
+            font-size: 30px;
             line-height: 1.6;
             background: rgba(255, 255, 255, 0.9);
             border: 2px solid rgba(100, 149, 237, 0.45);
             border-radius: 14px;
             box-shadow: 0 8px 20px rgba(0,0,0,.15);
             padding: 2rem;
+            margin:10px
+        }
+        ul:hover{
+            color: midnightblue;
+            font-style: italic;
         }
     </style>
 </head>
@@ -33,5 +43,27 @@
     <div class="tutorial-text">
         This enchanted website allows you to keep your metadata hidden from prying eyes by transforming its details into whatever you wish them to appear. You may begin your little spell by first uploading a photo of your choosing. Then, select which part of the metadata you would like to reshape. You will be presented with five options: Date, Time, Location, Camera Model, and Last Modified.
     </div>
+    <div class="tutorial-text" width="50%">
+        
+        On the first page, click on the upload button, and choose an image you want to edit.
+        Once that is opened, you will see a list of text boxes specifying which attribute you want to change.
+        Fill in the forms, then click on the button "Save Metadata". Save it in the folder you want. And you're done!
+        If you don't see anything on your image, don't worry, it just changed the information <b>about</b> the image.
+        <br>
+        <a href="index.html"><ul>If you want to go back to the main page, click on this text.</ul></a>
+        <a href="image.html"><ul>If you want to go to the exif editor, click on this text.</ul></a>
+    </div>
+    <div class="tutorial-text">
+        In the text boxes for each attribute, you must fill them out in a very specific manner.
+        <div class="tutorial-text">
+            <li>Camera Model: plain text (any kind of text)</li>
+            <li>Owner Name: plain text (any kind of text)</li>
+            <li>Date Created: yyyy : mm : dd hh : mm : ss</li>
+            <li>Date Modified: yyyy : mm : dd hh : mm : ss</li>
+            <li>GPS Latitude: Decimal</li>
+            <li>GPS Longitude: Decimal</li>
+        </div>
+    </div>
+
 </body>
 </html>

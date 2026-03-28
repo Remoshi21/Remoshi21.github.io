@@ -4,13 +4,10 @@ h1 {
     font-size: 2rem;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #fff;
     text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
-
-@keyframes flutter {
-    0%, 100% { transform: translateY(-50%) rotate(-20deg); }
-    50% { transform: translateY(-50%) rotate(-25deg); }
+h2{
+    font-weight: 400;
 }
 
 body {
@@ -47,42 +44,19 @@ body::before {
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
-    align-items: center;
     background: none;
     border: none;
     box-shadow: none;
-    border-radius: 0;
     flex-direction: column;
 }
 
 .center-square img {
     width: 260px;
     height: 260px;
-    object-fit: cover;
-    border-radius: 50%;
+    object-fit: contain;
     display: block;
 }
 
-.center-square::before,
-.center-square::after,
-.guide-square::before,
-.guide-square::after,
-.begin-square::before,
-.begin-square::after {
-    display: none;
-}
-
-/* Adjust wing sizes for smaller circles */
-.guide-square::before,
-.guide-square::after,
-.begin-square::before,
-.begin-square::after {
-    width: 60px;
-    height: 75px;
-    left: -30px;
-    right: -22px;
-    box-shadow: 0 -26px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4)), 0 26px 0 0 linear-gradient(45deg, rgba(255,255,255,0.9), rgba(173,216,230,0.7), rgba(255,182,193,0.5), rgba(144,238,144,0.4));
-}
 
 .guide-square {
     position: absolute;
@@ -92,17 +66,15 @@ body::before {
     height: 110px;
     display: flex;
     justify-content: center;
-    align-items: center;
     background: none;
     border: none;
     box-shadow: none;
-    border-radius: 0;
 }
 
 .guide-square img {
     width: 165px;
     height: 165px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -114,26 +86,35 @@ body::before {
     height: 110px;
     display: flex;
     justify-content: center;
-    align-items: center;
     background: none;
     border: none;
     box-shadow: none;
-    border-radius: 0;
 }
 
 .begin-square img {
     width: 165px;
     height: 165px;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
-#upload{
-    
+#welcome-image{
+    size: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* remove generated wings around the welcome image */
-.center-square::before,
-.center-square::after {
-    display: none;
+.header{
+    border: 2px solid rgba(100, 149, 237, 0.45);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    padding: 2rem;
+    color:midnightblue;
+    background: rgba(255, 255, 255, 0.9);
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
 }
